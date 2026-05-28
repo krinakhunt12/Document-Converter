@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient matching Nova Platform's primary brand theme -->
+    <linearGradient id="brand-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <!-- Subtle drop shadow to make the icon pop on any tab background -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#ea580c" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  <!-- Squircle (rounded card shape) base with brand gradient -->
+  <rect x="32" y="32" width="448" height="448" rx="100" fill="url(#brand-grad)" filter="url(#glow)" />
+  
+  <!-- Outer Hexagon matching Lucide Hexagon in Header -->
+  <path d="M256 110 L386 185 L386 327 L256 402 L126 327 L126 185 Z" 
+        fill="rgba(255, 255, 255, 0.15)" 
+        stroke="#ffffff" 
+        stroke-width="24" 
+        stroke-linejoin="round" />
+        
+  <!-- Sleek interior document/fold detail to denote file conversion -->
+  <path d="M210 215 L302 215 L302 307 M210 261 L270 261 M210 307 L260 307" 
+        stroke="#ffffff" 
+        stroke-width="20" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        fill="none" 
+        opacity="0.95" />
+</svg>

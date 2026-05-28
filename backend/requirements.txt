@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+pymupdf
+markdown
+weasyprint
+reportlab
+Pillow
+cairosvg
+vtracer
+pdfplumber
+openpyxl
+pandas
+xlrd
+python-multipart

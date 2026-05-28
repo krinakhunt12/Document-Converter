@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Inter", var(--font-sans);
+  
+  --color-primary-start: #f97316;
+  --color-primary-end: #ea580c;
+  
+  --color-surface-bg: #f8fafc;
+  --color-surface-card: #ffffff;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  body {
+    @apply bg-surface-bg text-slate-600 antialiased font-sans;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(249, 115, 22, 0.03) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(234, 88, 12, 0.03) 0px, transparent 50%);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans text-slate-900 tracking-tight font-semibold;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 sm:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium transition-all duration-200 bg-linear-to-r from-primary-start to-primary-end text-white hover:opacity-95 shadow-sm shadow-orange-500/10 hover:shadow-orange-500/20 active:scale-[0.98] cursor-pointer;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium transition-all duration-200 bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 hover:text-slate-900 shadow-xs active:scale-[0.98] cursor-pointer;
+  }
+
+  .card-minimal {
+    @apply bg-white border border-slate-200/80 rounded-xl overflow-hidden shadow-xs transition-all duration-300 hover:shadow-md hover:border-slate-300/80;
+  }
+
+  .input-minimal {
+    @apply w-full px-4 py-2.5 rounded-lg border border-slate-200 bg-white text-slate-800 placeholder-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500/10 focus:border-orange-500;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
