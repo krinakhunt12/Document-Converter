@@ -1,6 +1,9 @@
 # 🚀 Nova Converter — Universal File & Data Workspace
 
-Nova Converter is a professional-grade, privacy-first, and local file conversion platform. Engineered with a React (TypeScript) frontend and a FastAPI (Python) backend, it processes all documents 100% in-memory on your local machine, ensuring absolute security and lightning-fast execution.
+Nova Converter is a professional-grade, privacy-first file and data conversion platform. Engineered with a React (TypeScript) frontend and a FastAPI (Python) backend, it processes all documents securely and delivers lightning-fast execution.
+
+* **Live Deployed Backend**: [https://document-converter-puyg.onrender.com](https://document-converter-puyg.onrender.com)
+* **Live API Documentation**: [https://document-converter-puyg.onrender.com/docs](https://document-converter-puyg.onrender.com/docs)
 
 ---
 
@@ -87,11 +90,11 @@ Install the dependencies:
 pip install -r requirements.txt
 ```
 
-Launch the hot-reloading FastAPI server:
+Launch the hot-reloading FastAPI server (for local development):
 ```bash
 uvicorn main:app --port 8000 --reload
 ```
-*The backend API will be live at `http://localhost:8000`.*
+*The backend API runs locally at `http://localhost:8000` (or you can connect to the live instance at `https://document-converter-puyg.onrender.com`).*
 
 ---
 
